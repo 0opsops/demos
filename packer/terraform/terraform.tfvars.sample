@@ -1,0 +1,6 @@
+vpc_id        = "vpc-asdfasdfasdfasdf"
+aws_region    = "us-east-1"
+subnet_id     = "subnet-asdfasdfasdfasdf"
+packer_ami    = "ami-SDFS990907"
+key_name      = "YOUR_KEY"
+instance_type = "t2.micro"
