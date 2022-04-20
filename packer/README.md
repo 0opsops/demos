@@ -1,5 +1,6 @@
 # Prerequisite tools
 
+- AWS Account
 - AWS Cli
 - Packer
 - Terraform
