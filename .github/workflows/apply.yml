@@ -1,8 +1,9 @@
 name: "GHAs Provisioning EC2 with TF"
 
 on:
-  - workflow_dispatch
-
+  push:
+    branches:
+      - main
 defaults:
   run:
     shell: bash
