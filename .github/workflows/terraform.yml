@@ -26,8 +26,9 @@ jobs:
       - name: Get TFvars
         env:
           DATA1: ${{ secrets.DATA1 }}
+        shell: bash
         run: |
-            echo $DATA1 | base64 -d > terraform.tfvars
+          echo $DATA1 | base64 -d > terraform.tfvars
 
       - name: Checkout
         uses: actions/checkout@v3
