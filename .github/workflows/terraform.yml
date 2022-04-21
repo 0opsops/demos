@@ -47,7 +47,7 @@ jobs:
         run: |
           terraform plan
 
-
-      # - run: echo ${{ steps.plan.outputs.stdout }}
-      # - run: echo ${{ steps.plan.outputs.stderr }}
-      # - run: echo ${{ steps.plan.outputs.exitcode }}
+      - name: Terraform Apply
+        id: plan
+        run: |
+          terraform apply
