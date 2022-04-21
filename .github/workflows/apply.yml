@@ -10,10 +10,10 @@ on:
 #     branches:
 #       - main
 
-# defaults:
-#   run:
-#     shell: bash
-#     working-directory: packer/terraform
+defaults:
+  run:
+    shell: bash
+    working-directory: packer/terraform
 
 jobs:
   terraform:
