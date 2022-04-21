@@ -1,11 +1,11 @@
 name: "GHAs Provisioning EC2 with TF"
 
 on:
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: "Arrrrre you sure about this???"
-        required: true
+  # workflow_dispatch:
+  #   inputs:
+  #     reason:
+  #       description: "Arrrrre you sure about this???"
+  #       required: true
 
   push:
     branches:
@@ -55,15 +55,15 @@ jobs:
         run: |
           terraform plan
 
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
-        id: apply
-        run: |
-          terraform apply --auto-approve
+      # - name: Terraform Apply
+      #   if: github.ref == 'refs/heads/main'
+      #   id: apply
+      #   run: |
+      #     terraform apply --auto-approve
 
-      - name: Terraform Destroy
-        if: github.ref == 'refs/heads/main'
-        id: destroy
-        run: |
-          terraform destroy --auto-approve ${{ github.event.inputs.reason }}
+      # - name: Terraform Destroy
+      #   if: github.ref == 'refs/heads/main'
+      #   id: destroy
+      #   run: |
+      #     terraform destroy --auto-approve ${{ github.event.inputs.reason }}
 
