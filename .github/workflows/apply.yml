@@ -1,4 +1,4 @@
-name: "Provisioning EC2 with Terraform on AWS"
+name: "GAs Provisioning EC2 on AWS"
 
 on:
   workflow_dispatch:
