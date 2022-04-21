@@ -1,4 +1,4 @@
-name: "GHAs Provisioning EC2 with TF"
+name: "GHAs Provision the Infra"
 
 on:
   push:
@@ -11,7 +11,7 @@ defaults:
 
 jobs:
   terraform:
-    name: "Creating EC2 with Terraform"
+    name: "Provisioning"
     runs-on: ubuntu-20.04
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

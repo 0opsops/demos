@@ -1,4 +1,4 @@
-name: "GHAs Deprovisioning EC2 with TF"
+name: "GHAs Deprovision the Infra"
 on:
   - workflow_dispatch
 
@@ -9,7 +9,7 @@ defaults:
 
 jobs:
   terraform:
-    name: "Destroying EC2 with Terraform"
+    name: "Deprovisioning Platform"
     runs-on: ubuntu-20.04
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
