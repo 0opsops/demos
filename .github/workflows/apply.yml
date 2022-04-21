@@ -41,9 +41,3 @@ jobs:
         id: apply
         run: |
           terraform apply --auto-approve
-      # - name: Terraform Destroy
-      #   if: github.ref == 'refs/heads/main'
-      #   id: destroy
-      #   run: |
-      #     terraform destroy --auto-approve ${{ github.event.inputs.reason }}
-
