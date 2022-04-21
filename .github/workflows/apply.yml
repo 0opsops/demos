@@ -2,6 +2,10 @@ name: "Provisioning EC2 with Terraform on AWS"
 
 on:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Arrrrre you sure about this???"
+        required: true
 
   push:
     branches:
