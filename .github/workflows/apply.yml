@@ -1,19 +1,19 @@
 name: "GHAs Provisioning EC2 with TF"
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
+  # workflow_dispatch:
   #   inputs:
   #     reason:
   #       description: "Arrrrre you sure about this???"
   #       required: true
 
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 defaults:
   run:
@@ -53,7 +53,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
-          terraform plan ${{ github.event.inputs.reason }}
+          terraform plan
 
       # - name: Terraform Apply
       #   if: github.ref == 'refs/heads/main'
