@@ -1,19 +1,20 @@
 name: "GHAs Provisioning EC2 with TF"
 
-on: workflow_dispatch
-  # workflow_dispatch:
-  #   inputs:
-  #     reason:
-  #       description: "Arrrrre you sure about this???"
-  #       required: true
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Arrrrre you sure about this???"
+        required: true
+        default: "yes"
 
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
-  # pull_request:
-  #   branches:
-  #     - main
+  pull_request:
+    branches:
+      - main
 
 defaults:
   run:
@@ -47,6 +48,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: |
+          echo "Yes! It's initializing ${{ github.event.inputs.reason }}"
           rm -rf .terraform
           terraform init
 
