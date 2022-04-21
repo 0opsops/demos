@@ -10,7 +10,7 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: terraform
+    working-directory: packer/terraform
 
 jobs:
   terraform:
@@ -23,18 +23,18 @@ jobs:
       AWS_DEFAULT_REGION: us-east-1
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
       - name: Get TFvars
         env:
           DATA1: ${{ secrets.DATA1 }}
         shell: bash
         run: |
           echo $DATA1 | base64 -d > terraform.tfvars
-
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: HashiCorp - Setup Terraform
-        uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init
         id: init
