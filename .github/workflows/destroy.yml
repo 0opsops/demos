@@ -1,4 +1,4 @@
-name: "Provisioning EC2 with Terraform on AWS"
+name: "Deprovisioning EC2 with Terraform on AWS"
 on:
   workflow_dispatch:
     inputs:
