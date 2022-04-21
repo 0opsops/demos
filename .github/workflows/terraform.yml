@@ -1,19 +1,32 @@
 name: "Provisioning EC2 with Terraform on AWS"
 on:
   push:
+    paths:
+      - '*/**'
+  pull_request:
     branches:
       - main
-  pull_request:
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   terraform:
     name: "Initializing Terraform"
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-east-1
+      DATA1: ${{ secrets.DATA1 }}
 
     steps:
+      - name: Get TFvars
+        run: |
+            echo $DATA1 | base64 -d > terraform.tfvars
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -21,7 +34,16 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init
-        run: terraform init
+        id: init
+        run: |
+          rm -rf .terraform
+          terraform init
+
+      - name: Terraform Plan
+        id: plan
+        run: |
+          terraform plan
+
 
       # - run: echo ${{ steps.plan.outputs.stdout }}
       # - run: echo ${{ steps.plan.outputs.stderr }}

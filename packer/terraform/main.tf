@@ -7,6 +7,12 @@ terraform {
       version = ">= 4.10.0"
     }
   }
+  backend "s3" {
+    bucket = "packertfstate"
+    key    = "ec2.tfstate"
+    region = "us-east-1"
+    encrypt = true
+  }
 }
 
 provider "aws" {
