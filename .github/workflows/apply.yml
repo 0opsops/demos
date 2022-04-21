@@ -2,17 +2,6 @@ name: "GHAs Provisioning EC2 with TF"
 
 on:
   - workflow_dispatch
-    # inputs:
-    #   reason:
-    #     description: "Arrrrre you sure about this???"
-    #     required: true
-    #     default: "yes"
-  # push:
-  #   branches:
-  #     - main
-  # pull_request:
-  #   branches:
-  #     - main
 
 defaults:
   run:
