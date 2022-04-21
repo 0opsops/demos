@@ -1,6 +1,7 @@
 name: "GHAs Provisioning EC2 with TF"
 
-on: [workflow_dispatch]
+on:
+  - workflow_dispatch
     # inputs:
     #   reason:
     #     description: "Arrrrre you sure about this???"
