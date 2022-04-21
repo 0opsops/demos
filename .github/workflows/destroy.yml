@@ -2,9 +2,8 @@
 # on:
 #   workflow_dispatch:
 #   push:
-#     paths:
-#       - '*/**'
-#   workflow_dispatch:
+#     branches:
+#       - main
 #   pull_request:
 #     branches:
 #       - main

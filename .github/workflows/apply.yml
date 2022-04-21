@@ -2,8 +2,8 @@ name: "Provisioning EC2 with Terraform on AWS"
 on:
   workflow_dispatch:
   push:
-    paths:
-      - '*/**'
+    branches:
+      - main
   pull_request:
     branches:
       - main
