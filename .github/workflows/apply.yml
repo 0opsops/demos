@@ -2,16 +2,14 @@ name: "GHAs Provisioning EC2 with TF"
 
 on:
   workflow_dispatch:
-    inputs:
-      reason:
-        description: "Arrrrre you sure about this???"
-        required: true
-        default: "yes"
-
+    # inputs:
+    #   reason:
+    #     description: "Arrrrre you sure about this???"
+    #     required: true
+    #     default: "yes"
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -25,44 +23,35 @@ jobs:
   terraform:
     name: "Creating EC2 with Terraform"
     runs-on: ubuntu-20.04
-
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-1
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v2
-
       - name: Get TFvars
         env:
           DATA1: ${{ secrets.DATA1 }}
         shell: bash
         run: |
           echo $DATA1 | base64 -d > terraform.tfvars
-
       - name: Terraform Init
         id: init
         run: |
-          echo "Yes! It's initializing ${{ github.event.inputs.reason }}"
           rm -rf .terraform
           terraform init
-
       - name: Terraform Plan
         id: plan
         run: |
           terraform plan
-
       # - name: Terraform Apply
       #   if: github.ref == 'refs/heads/main'
       #   id: apply
       #   run: |
       #     terraform apply --auto-approve
-
       # - name: Terraform Destroy
       #   if: github.ref == 'refs/heads/main'
       #   id: destroy
