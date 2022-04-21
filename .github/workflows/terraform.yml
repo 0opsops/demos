@@ -3,9 +3,7 @@ on:
   push:
     paths:
       - '*/**'
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 defaults:
   run:
@@ -50,4 +48,9 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: |
-          terraform apply
+          terraform apply --auto-approve
+
+      - name: Terraform Destroy
+        id: destroy
+        run: |
+          terraform destroy --auto-approve
