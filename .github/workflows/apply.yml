@@ -1,17 +1,20 @@
 name: "Provisioning EC2 with Terraform on AWS"
+
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
 
-defaults:
-  run:
-    shell: bash
-    working-directory: packer/terraform
+#   push:
+#     branches:
+#       - main
+
+#   pull_request:
+#     branches:
+#       - main
+
+# defaults:
+#   run:
+#     shell: bash
+#     working-directory: packer/terraform
 
 jobs:
   terraform:
@@ -24,9 +27,11 @@ jobs:
       AWS_DEFAULT_REGION: us-east-1
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: hashicorp/setup-terraform@v2
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v2
 
       - name: Get TFvars
         env:
