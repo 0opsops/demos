@@ -1,0 +1,28 @@
+name: "Provisioning EC2 with Terraform on AWS"
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  terraform:
+    name: "Initializing Terraform"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init
+        run: terraform init
+
+      # - run: echo ${{ steps.plan.outputs.stdout }}
+      # - run: echo ${{ steps.plan.outputs.stderr }}
+      # - run: echo ${{ steps.plan.outputs.exitcode }}
