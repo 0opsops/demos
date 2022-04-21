@@ -1,4 +1,4 @@
-name: "GAs Deprovisioning EC2 with TF"
+name: "GHAs Deprovisioning EC2 with TF"
 on:
   workflow_dispatch:
     inputs:
