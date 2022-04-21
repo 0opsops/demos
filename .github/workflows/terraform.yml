@@ -2,7 +2,7 @@ name: "Provisioning EC2 with Terraform on AWS"
 on:
   push:
     paths:
-      - '*/**'
+      - 'packer/terraform'
   pull_request:
     branches:
       - main
@@ -20,12 +20,13 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-1
-      DATA1: ${{ secrets.DATA1 }}
 
     steps:
       - name: Get TFvars
         run: |
             echo $DATA1 | base64 -d > terraform.tfvars
+        env:
+          DATA1: ${{ secrets.DATA1 }}
 
       - name: Checkout
         uses: actions/checkout@v3
