@@ -48,6 +48,7 @@ jobs:
           terraform init
 
       - name: Terraform Destroy
+        if: github.ref == 'refs/heads/main'
         id: destroy
         run: |
           terraform destroy --auto-approve
