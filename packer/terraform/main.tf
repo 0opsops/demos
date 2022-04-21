@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= v1.1.6"
+  required_version = ">= v1.1.9"
 
   required_providers {
     aws = {
@@ -49,17 +49,19 @@ variable "instance_type" {
   default = ""
 }
 
-# Provision EC2
+# Create EIP
 resource "aws_eip" "packer" {
   instance = aws_instance.packer.id
   vpc      = true
 }
 
+# Attach EIP
 resource "aws_eip_association" "packer" {
   instance_id   = aws_instance.packer.id
   allocation_id = aws_eip.packer.id
 }
 
+# Create EC2
 resource "aws_instance" "packer" {
   ami                    = var.packer_ami
   key_name               = var.key_name
@@ -83,6 +85,7 @@ resource "aws_instance" "packer" {
   }
 }
 
+# Create SG
 resource "aws_security_group" "access_packer" {
   name   = "access_packer"
   vpc_id = var.vpc_id
