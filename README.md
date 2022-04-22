@@ -1,4 +1,4 @@
-# ![DevOps?](4.gif "Life") <font size="50"><strong> Demos 💣 </strong></font>
+# ![DevOps?](4.gif "Life") Demos 💣
 
 ![Fuck](https://c.tenor.com/-aZGk99QVM8AAAAC/space-force-microsoft.gif "!!!")
 
