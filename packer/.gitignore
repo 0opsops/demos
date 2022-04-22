@@ -14,6 +14,7 @@ crash.log
 # to change depending on the environment.
 #
 terraform/*.tfvars
+terraform/*.conf
 *.DS_*
 **.pem
 kubeconfig_**

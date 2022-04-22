@@ -23,6 +23,10 @@ variable "instance_type" {
   default = ""
 }
 
+variable "cidr" {
+  type    = string
+  default = ""
+}
 variable "public_subnets" {
   type    = list(string)
   default = []

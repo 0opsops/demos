@@ -8,10 +8,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "packertfstate"
-    key     = "ec2.tfstate"
-    region  = "us-east-1"
-    encrypt = true
+    bucket  = ""
+    key     = ""
+    region  = ""
+    encrypt = ""
   }
 }
 

@@ -1,0 +1,4 @@
+bucket  = "BACKET_NAME"
+key     = "STATEFILE_NAME"
+region  = "REGION"
+encrypt = boolean

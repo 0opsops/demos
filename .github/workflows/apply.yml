@@ -1,9 +1,10 @@
-name: "GHAs Provision the Infra"
+name: "GHAs Provision Infrastructure"
 
 on:
   push:
     branches:
       - main
+
 defaults:
   run:
     shell: bash
@@ -22,17 +23,19 @@ jobs:
         uses: actions/checkout@v3
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v2
-      - name: Get TFvars
+      - name: Get TFVars and BEConfig
         env:
           DATA1: ${{ secrets.DATA1 }}
+          DATA2: ${{ secrets.DATA2 }}
         shell: bash
         run: |
           echo $DATA1 | base64 -d > terraform.tfvars
+          echo $DATA2 | base64 -d > backend.conf
       - name: Terraform Init
         id: init
         run: |
           rm -rf .terraform
-          terraform init
+          terraform init -backend-config=backend.conf
       - name: Terraform Plan
         id: plan
         run: |
