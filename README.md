@@ -19,7 +19,7 @@ ______________________________________________
 
 [![GitHub issues](https://img.shields.io/github/issues/0opsops/demos?label=Issues)](https://github.com/0opsops/demos/issues)
 
-[![Email](https://img.shields.io/badge/Contact-%F0%9F%93%AE-9cf)]((mailto:oopsops@protonmail.com?subject=[GitHub]%20Source%20Han%20Sans))
+<a href="mailto:oopsops@protonmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
 [![License: WTFPL](https://img.shields.io/badge/License%20%F0%9F%93%87%20%20-WTFPL-blueviolet)](https://github.com/0opsops/demos/blob/main/LICENSE)
 
