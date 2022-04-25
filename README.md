@@ -22,10 +22,10 @@ ______________________________________________
 **WE DO NOT OWN ANYTHING YOU SEE HERE! THIS IS FOR NON-COMMERCIAL AND EDUCATIONAL PURPOSE ONLY!**
 ______________________________________________
 
-![Stacks](img/amz.svg "Tooling Stacks") ![Stacks](img/gh.svg "Tooling Stacks") <img src="img/gha.png" style="width:56px;"/> ![Stacks](img/pkr.svg "Tooling Stacks") ![Stacks](img/tf.svg "Tooling Stacks") ![Stacks](img/ubt.svg "Tooling Stacks") ![Stacks](img/nd.svg "Tooling Stacks") ![Stacks](img/dk.svg "Tooling Stacks")
-
-______________________________________________
-
 ## Reach out to us!
 
 <a href="mailto:oopsops@protonmail.com?"><img src="img/mail.svg"/></a>
+
+______________________________________________
+
+![Stacks](img/amz.svg "Tooling Stacks") ![Stacks](img/gh.svg "Tooling Stacks") <img src="img/gha.png" style="width:58px;"/> ![Stacks](img/pkr.svg "Tooling Stacks") ![Stacks](img/tf.svg "Tooling Stacks") ![Stacks](img/ubt.svg "Tooling Stacks") ![Stacks](img/nd.svg "Tooling Stacks") ![Stacks](img/dk.svg "Tooling Stacks")
