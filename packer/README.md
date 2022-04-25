@@ -27,7 +27,7 @@
 
 ```Set Secrets for GHAs```
 
-![GHAs](../2.png "Follow 1, 2 and 3")
+![GHAs](../img/2.png "Follow 1, 2 and 3")
 
 ```md
     a. AWS_ACCESS_KEY_ID = YOUR_AWS_ACCESS_KEY
@@ -40,4 +40,4 @@
 
 ```Run your GHAs 🚀🚀🚀```
 
-![GHAs](../3.png "Follow 1, 2 and 3")
+![GHAs](../img/3.png "Follow 1, 2 and 3")

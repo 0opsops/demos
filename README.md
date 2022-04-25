@@ -1,10 +1,10 @@
-# ![DevOps?](4.gif "Life") **Demos** 💣
+# ![DevOps?](img/4.gif "Life") **Demos** 💣
 
-![Demos](./5.jpeg "About this Demos")
+![Demos](img/5.jpeg "About this Demos")
 
 ![Fuck](https://c.tenor.com/-aZGk99QVM8AAAAC/space-force-microsoft.gif "!!!")
 
-![Happening](./1.jpeg "Now! Now! You all good!")
+![Happening](img/1.jpeg "Now! Now! You all good!")
 ______________________________________________
 
 ______________________________________________
@@ -19,8 +19,10 @@ ______________________________________________
 
 [![GitHub issues](https://img.shields.io/github/issues/0opsops/demos?label=Issues)](https://github.com/0opsops/demos/issues)
 
-<a href="mailto:oopsops@protonmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
-
-[![License: WTFPL](https://img.shields.io/badge/License%20%F0%9F%93%87%20%20-WTFPL-blueviolet)](https://github.com/0opsops/demos/blob/main/LICENSE)
+[![License: WTFPL](https://img.shields.io/badge/License%20%F0%9F%93%87%20%20-WTFPL-blueviolet)](./LICENSE.md)
 
 **WE DO NOT OWN ANYTHING YOU SEE HERE! THIS IS FOR NON-COMMERCIAL AND EDUCATIONAL PURPOSE ONLY!**
+__________________________________________________
+![Stacks](img/amz.svg "Tooling Stacks") ![Stacks](img/gh.svg "Tooling Stacks") <img src="img/gha.png" style="width:56px;"/> ![Stacks](img/pkr.svg "Tooling Stacks") ![Stacks](img/tf.svg "Tooling Stacks") ![Stacks](img/ubt.svg "Tooling Stacks") ![Stacks](img/nd.svg "Tooling Stacks") ![Stacks](img/dk.svg "Tooling Stacks")
+
+<a href="mailto:oopsops@protonmail.com?"><img src="img/mail.svg"/></a>
