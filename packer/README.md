@@ -14,6 +14,10 @@
     --output text)
 ```
 
+## Overview Workflow
+
+![Workflow](../img/workflow_overview.png "Overview Workflow")
+
 ## Build your AMI (takes 10-13 mins)
 
 ```bash
