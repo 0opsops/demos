@@ -2,8 +2,6 @@
 
 ![Demos](img/5.jpeg "About this Demos")
 
-![Fuck](https://c.tenor.com/-aZGk99QVM8AAAAC/space-force-microsoft.gif "!!!")
-
 ![Happening](img/1.jpeg "Now! Now! You all good!")
 ______________________________________________
 
