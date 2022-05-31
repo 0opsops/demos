@@ -20,5 +20,5 @@ provider "aws" {
 }
 
 output "PACKER_EIP" {
-  value = aws_instance.packer.public_ip
+  value = aws_eip.packer.public_ip
 }

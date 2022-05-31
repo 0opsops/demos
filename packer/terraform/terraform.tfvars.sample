@@ -1,8 +1,8 @@
 aws_region      = "us-east-1"
-packer_ami      = "ami-SDFS990907"
 key_name        = "YOUR_KEY"
 instance_type   = "t2.micro"
 cidr            = "x.x.x.x/x"
 private_subnets = ["x.x.1.0/24", "x.x.2.0/24", "x.x.3.0/24"]
 public_subnets  = ["x.x.101.0/24", "x.x.102.0/24", "x.x.103.0/24"]
 azs             = ["us-east-1a", "us-east-1b", "us-east-1c"]
+# packer_ami      = "ami-SDFS990907"

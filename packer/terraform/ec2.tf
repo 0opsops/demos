@@ -1,3 +1,17 @@
+# Get AMI
+data "aws_ami" "ami" {
+  most_recent = true
+  owners      = ["self"]
+  filter {
+    name   = "name"
+    values = ["my-vm-*"]
+  }
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+}
+
 # Create EIP
 resource "aws_eip" "packer" {
   instance = aws_instance.packer.id
@@ -15,7 +29,7 @@ resource "aws_eip_association" "packer" {
 
 # Create EC2
 resource "aws_instance" "packer" {
-  ami                    = var.packer_ami
+  ami                    = data.aws_ami.ami.id #var.packer_ami
   key_name               = var.key_name
   instance_type          = var.instance_type
   subnet_id              = element(module.vpc.public_subnets, 0)

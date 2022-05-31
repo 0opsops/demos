@@ -10,10 +10,6 @@ variable "subnet_id" {
   type    = string
   default = ""
 }
-variable "packer_ami" {
-  type    = string
-  default = ""
-}
 variable "key_name" {
   type    = string
   default = ""
@@ -39,3 +35,7 @@ variable "azs" {
   type    = list(string)
   default = []
 }
+# variable "packer_ami" {
+#   type    = string
+#   default = ""
+# }
